@@ -70,13 +70,13 @@ public class DatabaseHandler extends DatabaseConfig {
             prSt.setString(1, nickname);
 
             try (ResultSet resSet = prSt.executeQuery()) {
-                return resSet.next();  // Return true if a record is found
+                return resSet.next();
             }
         } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();  // Handle the exception appropriately
+            e.printStackTrace();
         }
 
-        return false;  // Return false if an exception occurs
+        return false;
     }
 
 

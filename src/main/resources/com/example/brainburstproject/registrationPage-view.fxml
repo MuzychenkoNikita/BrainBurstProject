@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="1058.0" maxWidth="1562.0" minHeight="600.0" minWidth="900.0" prefHeight="941.0" prefWidth="1425.0" spacing="20.0" style="-fx-background-image: url(background.jpg);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.brainburstproject.RegistrationPageController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox fillHeight="false" prefHeight="600.0" prefWidth="900.0">
+      <children>
+         <VBox alignment="CENTER" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #d5d5f7;">
+            <children>
+               <Label text="Let's make new Account" textAlignment="CENTER">
+                  <font>
+                     <Font name="Arial Bold" size="23.0" />
+                  </font>
+               </Label>
+               <Label text="Nickname">
+                  <VBox.margin>
+                     <Insets right="240.0" top="30.0" />
+                  </VBox.margin>
+                  <effect>
+                     <Glow />
+                  </effect>
+               </Label>
+               <TextField fx:id="nicknameField" maxWidth="300.0" minHeight="30.0" minWidth="50.0" prefWidth="300.0">
+                  <VBox.margin>
+                     <Insets top="5.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label text="Password">
+                  <effect>
+                     <Glow />
+                  </effect>
+                  <VBox.margin>
+                     <Insets right="240.0" top="15.0" />
+                  </VBox.margin>
+               </Label>
+               <PasswordField fx:id="passwordField" maxWidth="300.0" minHeight="30.0">
+                  <VBox.margin>
+                     <Insets top="5.0" />
+                  </VBox.margin>
+               </PasswordField>
+               <Label text="Confirm Password">
+                  <effect>
+                     <Glow />
+                  </effect>
+                  <VBox.margin>
+                     <Insets right="195.0" top="5.0" />
+                  </VBox.margin>
+               </Label>
+               <PasswordField fx:id="passwordFieldCheck" maxWidth="300.0" minHeight="30.0">
+                  <VBox.margin>
+                     <Insets top="5.0" />
+                  </VBox.margin>
+               </PasswordField>
+               <Button fx:id="signUpButton" alignment="CENTER" maxWidth="300.0" minHeight="30.0" minWidth="50.0" onAction="#onSignUpButtonClick" style="-fx-background-color: #ededf7;" text="Sign Up">
+                  <VBox.margin>
+                     <Insets top="60.0" />
+                  </VBox.margin>
+               </Button>
+               <Hyperlink fx:id="loginAccountLink" onAction="#onLoginAccountLinkClick" text="Already have an account? Login." textFill="#403d3d">
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+               </Hyperlink>
+            
+                                                             <Label fx:id="errorLabel" textFill="#ff1c1c">
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font size="16.0" />
+                  </font></Label>
+            </children>
+         </VBox>
+         <Pane minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #FCEEEE;">
+            <children>
+               <ImageView fitHeight="600.0" fitWidth="500.0" style="-fx-opacity: 20;">
+                  <image>
+                     <Image url="@../../../logotype.jpg" />
+                  </image>
+               </ImageView>
+            </children>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Pane>
+      </children>
+   </HBox>
+</VBox>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="1058.0" maxWidth="1562.0" minHeight="600.0" minWidth="900.0" prefHeight="941.0" prefWidth="1425.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.brainburstproject.MenuPageController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox fillHeight="false" prefHeight="600.0" prefWidth="900.0">
+      <children>
+         <VBox alignment="TOP_CENTER" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #d5d5f7;">
+            <children>
+               <Button fx:id="signOutButton" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onAction="#onSignOutButtonClick" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #d5d5f7;">
+                  <VBox.margin>
+                     <Insets right="330.0" top="23.0" />
+                  </VBox.margin>
+                  <graphic>
+                     <ImageView fitHeight="25.0" fitWidth="25.0" rotate="180.0">
+                        <image>
+                           <Image url="@../../../signOutLogo.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Label text="Choose Quiz table and Play!" textAlignment="CENTER">
+                  <font>
+                     <Font name="Arial Bold" size="23.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+               </Label>
+               <Button fx:id="playChosenQuizButton" alignment="CENTER" maxWidth="300.0" minHeight="40.0" minWidth="50.0" onAction="#onPlayChosenQuizButtonClick" style="-fx-background-color: #ededf7;" text="Play this Quiz">
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Button>
+               <Button fx:id="leaderboardButton" alignment="CENTER" maxWidth="300.0" minHeight="40.0" minWidth="40.0" onAction="#onLeaderboardButtonClick" style="-fx-background-color: #ededf7;" text="Quiz leaderboard">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+               </Button>
+               <Button fx:id="checkScoreButton" alignment="CENTER" maxWidth="300.0" minHeight="40.0" minWidth="40.0" onAction="#onCheckScoreButtonClick" style="-fx-background-color: #ededf7;" text="Check your result">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="30.0" />
+                  </VBox.margin>
+               </Button>
+               <Label fx:id="chosenQuizLabel" textAlignment="CENTER">
+                  <font>
+                     <Font name="Arial Italic" size="23.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+               </Label>
+               <Label fx:id="informationLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="180.0" textAlignment="CENTER">
+                  <font>
+                     <Font name="Arial" size="23.0" />
+                  </font>
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+               </Label>
+            
+                                                             <Label fx:id="errorLabel" textFill="#ff1c1c">
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font size="16.0" />
+                  </font></Label>
+            </children>
+         </VBox>
+         <Pane minHeight="600.0" minWidth="500.0" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: #f1f0f8;">
+            <children>
+               <ListView fx:id="quizTablesListView" editable="true" fixedCellSize="100.0" layoutX="25.0" layoutY="36.0" prefHeight="540.0" prefWidth="450.0" />
+            </children>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </Pane>
+         <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      </children>
+   </HBox>
+</VBox>
